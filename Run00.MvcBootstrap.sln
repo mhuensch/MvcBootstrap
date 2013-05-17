@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{16357528-E649-4DEB-81CD-0BC96A802338}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Run00.MvcBootstrap", "Run00.MvcBootstrap\Run00.MvcBootstrap.csproj", "{E5FA10B8-1324-437F-ADE7-C6A85D6D6B83}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Run00.MvcBootstrap.TestHost", "Run00.MvcBootstrap.TestHost\Run00.MvcBootstrap.TestHost.csproj", "{8BFE0AE3-8454-490A-ADA3-8CBD420AA9D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoC.Web.PrecompiledViews", "Commons.Web.PrecompiledViews\BoC.Web.PrecompiledViews.csproj", "{46C9FDE4-328A-4E80-8504-AED5E2196AE1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E5FA10B8-1324-437F-ADE7-C6A85D6D6B83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5FA10B8-1324-437F-ADE7-C6A85D6D6B83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5FA10B8-1324-437F-ADE7-C6A85D6D6B83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5FA10B8-1324-437F-ADE7-C6A85D6D6B83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BFE0AE3-8454-490A-ADA3-8CBD420AA9D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BFE0AE3-8454-490A-ADA3-8CBD420AA9D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BFE0AE3-8454-490A-ADA3-8CBD420AA9D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BFE0AE3-8454-490A-ADA3-8CBD420AA9D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46C9FDE4-328A-4E80-8504-AED5E2196AE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46C9FDE4-328A-4E80-8504-AED5E2196AE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46C9FDE4-328A-4E80-8504-AED5E2196AE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46C9FDE4-328A-4E80-8504-AED5E2196AE1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
