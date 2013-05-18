@@ -16,15 +16,19 @@ namespace Run00.MvcBootstrap.TestHost
 	{
 		protected void Application_Start()
 		{
+
 			AreaRegistration.RegisterAllAreas();
 
 			WebApiConfig.Register(GlobalConfiguration.Configuration);
 			FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
 			RouteConfig.RegisterRoutes(RouteTable.Routes);
-			BundleConfig.RegisterBundles(BundleTable.Bundles);
+			//BundleConfig.RegisterBundles(BundleTable.Bundles);
 			AuthConfig.RegisterAuth();
 
-			BoC.Web.Mvc.PrecompiledViews.ApplicationPartRegistry.Register(typeof(Run00.MvcBootstrap.AuthConfig).Assembly);
+			ViewEngines.Engines.Clear();
+			ViewEngines.Engines.Add(new RazorEngine());
+
+			BoC.Web.Mvc.PrecompiledViews.ApplicationPartRegistry.Register(typeof(Run00.MvcBootstrap.Areas.Controllers.WorldController).Assembly);
 		}
 	}
 
