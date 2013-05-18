@@ -56,7 +56,6 @@ namespace BoC.Web.Mvc.PrecompiledViews
 			if (attribute != null)
 			{
 				var rootRelativeVirtualPath = GetRootRelativeVirtualPath(rootVirtualPath ?? "", attribute.VirtualPath);
-				rootRelativeVirtualPath = rootRelativeVirtualPath.Replace("~/", "~/Areas/");
 				registeredPaths[rootRelativeVirtualPath.ToLower()] = type;
 			}
 		}

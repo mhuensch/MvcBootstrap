@@ -20,8 +20,8 @@ namespace Run00.MvcBootstrap.TestHost
 			);
 
 			routes.MapRoute(
-					name: "Areas",
-					url: "Areas/{controller}/{action}/{id}",
+					name: RazorEngine.RootAreaName,
+					url: RazorEngine.RootAreaName + "/{controller}/{action}/{id}",
 					defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
 			);
 

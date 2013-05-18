@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BoC.Web.Mvc.PrecompiledViews;
+using Run00.MvcBootstrap.Controllers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -28,7 +30,7 @@ namespace Run00.MvcBootstrap.TestHost
 			ViewEngines.Engines.Clear();
 			ViewEngines.Engines.Add(new RazorEngine());
 
-			BoC.Web.Mvc.PrecompiledViews.ApplicationPartRegistry.Register(typeof(Run00.MvcBootstrap.Areas.Controllers.WorldController).Assembly);
+			ApplicationPartRegistry.Register(typeof(WorldController).Assembly, "/" + RazorEngine.RootAreaName);
 		}
 	}
 

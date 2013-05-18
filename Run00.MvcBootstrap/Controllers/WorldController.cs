@@ -1,6 +1,6 @@
 ﻿using System.Web.Mvc;
 
-namespace Run00.MvcBootstrap.Areas.Controllers
+namespace Run00.MvcBootstrap.Controllers
 {
 	public class WorldController : Controller
 	{

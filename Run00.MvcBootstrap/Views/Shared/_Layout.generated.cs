@@ -71,12 +71,12 @@ WriteLiteral(" name=\"viewport\"");
 
 WriteLiteral(" content=\"width=device-width\"");
 
-WriteLiteral(" />\r\n");
+WriteLiteral(" />\r\n\r\n");
 
 WriteLiteral("\t");
 
             
-            #line 8 "..\..\Views\Shared\_Layout.cshtml"
+            #line 9 "..\..\Views\Shared\_Layout.cshtml"
 Write(Styles.Render("~/Content/css"));
 
             
@@ -87,7 +87,7 @@ WriteLiteral("\r\n");
 WriteLiteral("\t");
 
             
-            #line 9 "..\..\Views\Shared\_Layout.cshtml"
+            #line 10 "..\..\Views\Shared\_Layout.cshtml"
 Write(Scripts.Render("~/bundles/modernizr"));
 
             
@@ -108,7 +108,7 @@ WriteLiteral(" class=\"site-title\"");
 WriteLiteral(">");
 
             
-            #line 15 "..\..\Views\Shared\_Layout.cshtml"
+            #line 16 "..\..\Views\Shared\_Layout.cshtml"
                      Write(Html.ActionLink("your logo here", "Index", "Home"));
 
             
@@ -127,7 +127,7 @@ WriteLiteral(">\r\n");
 WriteLiteral("\t\t\t\t\t");
 
             
-            #line 19 "..\..\Views\Shared\_Layout.cshtml"
+            #line 20 "..\..\Views\Shared\_Layout.cshtml"
 Write(Html.Partial("_LoginPartial"));
 
             
@@ -140,7 +140,7 @@ WriteLiteral(" id=\"menu\"");
 WriteLiteral(">\r\n\t\t\t\t\t\t<li>");
 
             
-            #line 23 "..\..\Views\Shared\_Layout.cshtml"
+            #line 24 "..\..\Views\Shared\_Layout.cshtml"
      Write(Html.ActionLink("Home", "Index", "Home"));
 
             
@@ -149,7 +149,7 @@ WriteLiteral(">\r\n\t\t\t\t\t\t<li>");
 WriteLiteral("</li>\r\n\t\t\t\t\t\t<li>");
 
             
-            #line 24 "..\..\Views\Shared\_Layout.cshtml"
+            #line 25 "..\..\Views\Shared\_Layout.cshtml"
      Write(Html.ActionLink("About", "About", "Home"));
 
             
@@ -158,7 +158,7 @@ WriteLiteral("</li>\r\n\t\t\t\t\t\t<li>");
 WriteLiteral("</li>\r\n\t\t\t\t\t\t<li>");
 
             
-            #line 25 "..\..\Views\Shared\_Layout.cshtml"
+            #line 26 "..\..\Views\Shared\_Layout.cshtml"
      Write(Html.ActionLink("Contact2", "Contact2", "Home"));
 
             
@@ -173,7 +173,7 @@ WriteLiteral(">\r\n");
 WriteLiteral("\t\t");
 
             
-            #line 32 "..\..\Views\Shared\_Layout.cshtml"
+            #line 33 "..\..\Views\Shared\_Layout.cshtml"
 Write(RenderSection("featured", required: false));
 
             
@@ -188,7 +188,7 @@ WriteLiteral(">\r\n");
 WriteLiteral("\t\t\t");
 
             
-            #line 34 "..\..\Views\Shared\_Layout.cshtml"
+            #line 35 "..\..\Views\Shared\_Layout.cshtml"
 Write(RenderBody());
 
             
@@ -205,7 +205,7 @@ WriteLiteral(" class=\"float-left\"");
 WriteLiteral(">\r\n\t\t\t\t<p>&copy; ");
 
             
-            #line 40 "..\..\Views\Shared\_Layout.cshtml"
+            #line 41 "..\..\Views\Shared\_Layout.cshtml"
          Write(DateTime.Now.Year);
 
             
@@ -216,7 +216,7 @@ WriteLiteral(" - My ASP.NET MVC Application</p>\r\n\t\t\t</div>\r\n\t\t</div>\r\
 WriteLiteral("\t");
 
             
-            #line 45 "..\..\Views\Shared\_Layout.cshtml"
+            #line 46 "..\..\Views\Shared\_Layout.cshtml"
 Write(Scripts.Render("~/bundles/jquery"));
 
             
@@ -227,7 +227,7 @@ WriteLiteral("\r\n");
 WriteLiteral("\t");
 
             
-            #line 46 "..\..\Views\Shared\_Layout.cshtml"
+            #line 47 "..\..\Views\Shared\_Layout.cshtml"
 Write(RenderSection("scripts", required: false));
 
             

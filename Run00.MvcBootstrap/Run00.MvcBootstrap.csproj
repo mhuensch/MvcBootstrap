@@ -41,21 +41,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AssemblyVersionPortableArea">
-      <HintPath>..\packages\MvcPortableArea.1.0\lib\AssemblyVersionPortableArea.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Microsoft.Web.Mvc">
-      <HintPath>..\packages\Mvc2Futures.2.0.50217.0\lib\Microsoft.Web.Mvc.dll</HintPath>
-    </Reference>
-    <Reference Include="MvcContrib">
-      <HintPath>..\packages\MvcContrib.2.0.95.0\lib\MvcContrib.dll</HintPath>
-    </Reference>
     <Reference Include="RazorGenerator.Mvc">
       <HintPath>..\packages\RazorGenerator.Mvc.2.0.1\lib\net40\RazorGenerator.Mvc.dll</HintPath>
-    </Reference>
-    <Reference Include="RssWidget">
-      <HintPath>..\packages\MvcPortableArea.1.0\lib\RssWidget.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -196,9 +184,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Areas\Controllers\EmbeddedResourceController.cs" />
-    <Compile Include="Areas\Controllers\WorldController.cs" />
-    <Compile Include="Areas\DemoAreaRegistration.cs" />
+    <Compile Include="Controllers\WorldController.cs" />
+    <Compile Include="MyAreaRegistration.cs" />
     <Compile Include="RazorEngine.cs" />
     <Compile Include="Views\Shared\_Layout.generated.cs">
       <AutoGen>True</AutoGen>
@@ -213,67 +200,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Areas\Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
-    <EmbeddedResource Include="Areas\Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
-    <EmbeddedResource Include="Areas\Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
-    <EmbeddedResource Include="Areas\Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
-    <EmbeddedResource Include="Areas\Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
-    <EmbeddedResource Include="Areas\Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
-    <EmbeddedResource Include="Areas\Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
-    <EmbeddedResource Include="Areas\Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
-    <EmbeddedResource Include="Areas\Content\themes\base\images\ui-icons_222222_256x240.png" />
-    <EmbeddedResource Include="Areas\Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
-    <EmbeddedResource Include="Areas\Content\themes\base\images\ui-icons_454545_256x240.png" />
-    <EmbeddedResource Include="Areas\Content\themes\base\images\ui-icons_888888_256x240.png" />
-    <EmbeddedResource Include="Areas\Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
-    <EmbeddedResource Include="Areas\Content\themes\base\jquery-ui.css" />
-    <EmbeddedResource Include="Areas\Content\themes\base\jquery.ui.accordion.css" />
-    <EmbeddedResource Include="Areas\Content\themes\base\jquery.ui.all.css" />
-    <EmbeddedResource Include="Areas\Content\themes\base\jquery.ui.autocomplete.css" />
-    <EmbeddedResource Include="Areas\Content\themes\base\jquery.ui.base.css" />
-    <EmbeddedResource Include="Areas\Content\themes\base\jquery.ui.button.css" />
-    <EmbeddedResource Include="Areas\Content\themes\base\jquery.ui.core.css" />
-    <EmbeddedResource Include="Areas\Content\themes\base\jquery.ui.datepicker.css" />
-    <EmbeddedResource Include="Areas\Content\themes\base\jquery.ui.dialog.css" />
-    <EmbeddedResource Include="Areas\Content\themes\base\jquery.ui.menu.css" />
-    <EmbeddedResource Include="Areas\Content\themes\base\jquery.ui.progressbar.css" />
-    <EmbeddedResource Include="Areas\Content\themes\base\jquery.ui.resizable.css" />
-    <EmbeddedResource Include="Areas\Content\themes\base\jquery.ui.selectable.css" />
-    <EmbeddedResource Include="Areas\Content\themes\base\jquery.ui.slider.css" />
-    <EmbeddedResource Include="Areas\Content\themes\base\jquery.ui.spinner.css" />
-    <EmbeddedResource Include="Areas\Content\themes\base\jquery.ui.tabs.css" />
-    <EmbeddedResource Include="Areas\Content\themes\base\jquery.ui.theme.css" />
-    <EmbeddedResource Include="Areas\Content\themes\base\jquery.ui.tooltip.css" />
-    <EmbeddedResource Include="Areas\Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
-    <EmbeddedResource Include="Areas\Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
-    <EmbeddedResource Include="Areas\Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
-    <EmbeddedResource Include="Areas\Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
-    <EmbeddedResource Include="Areas\Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
-    <EmbeddedResource Include="Areas\Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
-    <EmbeddedResource Include="Areas\Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
-    <EmbeddedResource Include="Areas\Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
-    <EmbeddedResource Include="Areas\Content\themes\base\minified\images\ui-icons_222222_256x240.png" />
-    <EmbeddedResource Include="Areas\Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
-    <EmbeddedResource Include="Areas\Content\themes\base\minified\images\ui-icons_454545_256x240.png" />
-    <EmbeddedResource Include="Areas\Content\themes\base\minified\images\ui-icons_888888_256x240.png" />
-    <EmbeddedResource Include="Areas\Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
-    <EmbeddedResource Include="Areas\Content\themes\base\minified\jquery-ui.min.css" />
-    <EmbeddedResource Include="Areas\Content\themes\base\minified\jquery.ui.accordion.min.css" />
-    <EmbeddedResource Include="Areas\Content\themes\base\minified\jquery.ui.autocomplete.min.css" />
-    <EmbeddedResource Include="Areas\Content\themes\base\minified\jquery.ui.button.min.css" />
-    <EmbeddedResource Include="Areas\Content\themes\base\minified\jquery.ui.core.min.css" />
-    <EmbeddedResource Include="Areas\Content\themes\base\minified\jquery.ui.datepicker.min.css" />
-    <EmbeddedResource Include="Areas\Content\themes\base\minified\jquery.ui.dialog.min.css" />
-    <EmbeddedResource Include="Areas\Content\themes\base\minified\jquery.ui.menu.min.css" />
-    <EmbeddedResource Include="Areas\Content\themes\base\minified\jquery.ui.progressbar.min.css" />
-    <EmbeddedResource Include="Areas\Content\themes\base\minified\jquery.ui.resizable.min.css" />
-    <EmbeddedResource Include="Areas\Content\themes\base\minified\jquery.ui.selectable.min.css" />
-    <EmbeddedResource Include="Areas\Content\themes\base\minified\jquery.ui.slider.min.css" />
-    <EmbeddedResource Include="Areas\Content\themes\base\minified\jquery.ui.spinner.min.css" />
-    <EmbeddedResource Include="Areas\Content\themes\base\minified\jquery.ui.tabs.min.css" />
-    <EmbeddedResource Include="Areas\Content\themes\base\minified\jquery.ui.theme.min.css" />
-    <EmbeddedResource Include="Areas\Content\themes\base\minified\jquery.ui.tooltip.min.css" />
-    <Content Include="Areas\Web.config" />
+    <Content Include="Web.config" />
     <Content Include="Views\World\Hello.cshtml">
       <Generator>RazorGenerator</Generator>
       <LastGenOutput>Hello.generated.cs</LastGenOutput>
@@ -283,46 +210,25 @@
       <LastGenOutput>_Layout.generated.cs</LastGenOutput>
       <Generator>RazorGenerator</Generator>
     </Content>
-    <EmbeddedResource Include="Areas\Scripts\jquery-1.8.2.intellisense.js" />
-    <EmbeddedResource Include="Areas\Scripts\jquery-1.8.2.js" />
-    <EmbeddedResource Include="Areas\Scripts\jquery-1.8.2.min.js" />
-    <EmbeddedResource Include="Areas\Scripts\jquery.validate-vsdoc.js" />
-    <EmbeddedResource Include="Areas\Scripts\jquery.unobtrusive-ajax.js" />
-    <EmbeddedResource Include="Areas\Scripts\jquery.unobtrusive-ajax.min.js" />
-    <EmbeddedResource Include="Areas\Scripts\jquery.validate.js" />
-    <EmbeddedResource Include="Areas\Scripts\jquery.validate.min.js" />
-    <EmbeddedResource Include="Areas\Scripts\jquery.validate.unobtrusive.js" />
-    <EmbeddedResource Include="Areas\Scripts\jquery.validate.unobtrusive.min.js" />
-    <EmbeddedResource Include="Areas\Scripts\knockout-2.2.0.debug.js" />
-    <EmbeddedResource Include="Areas\Scripts\knockout-2.2.0.js" />
-    <EmbeddedResource Include="Areas\Scripts\modernizr-2.6.2.js" />
-    <Content Include="Web.config" />
-    <Content Include="Web.Debug.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </Content>
-    <Content Include="Web.Release.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </Content>
-    <EmbeddedResource Include="Areas\Content\Styles\Site.css" />
-    <EmbeddedResource Include="Areas\Scripts\_references.js" />
-    <EmbeddedResource Include="Areas\Images\accent.png" />
-    <EmbeddedResource Include="Areas\Images\bullet.png" />
-    <EmbeddedResource Include="Areas\Images\heroAccent.png" />
-    <EmbeddedResource Include="Areas\Images\orderedList0.png" />
-    <EmbeddedResource Include="Areas\Images\orderedList1.png" />
-    <EmbeddedResource Include="Areas\Images\orderedList2.png" />
-    <EmbeddedResource Include="Areas\Images\orderedList3.png" />
-    <EmbeddedResource Include="Areas\Images\orderedList4.png" />
-    <EmbeddedResource Include="Areas\Images\orderedList5.png" />
-    <EmbeddedResource Include="Areas\Images\orderedList6.png" />
-    <EmbeddedResource Include="Areas\Images\orderedList7.png" />
-    <EmbeddedResource Include="Areas\Images\orderedList8.png" />
-    <EmbeddedResource Include="Areas\Images\orderedList9.png" />
+    <EmbeddedResource Include="Scripts\jquery-1.8.2.intellisense.js" />
+    <EmbeddedResource Include="Scripts\jquery-1.8.2.js" />
+    <EmbeddedResource Include="Scripts\jquery-1.8.2.min.js" />
+    <EmbeddedResource Include="Scripts\jquery.validate-vsdoc.js" />
+    <EmbeddedResource Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <EmbeddedResource Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <EmbeddedResource Include="Scripts\jquery.validate.js" />
+    <EmbeddedResource Include="Scripts\jquery.validate.min.js" />
+    <EmbeddedResource Include="Scripts\jquery.validate.unobtrusive.js" />
+    <EmbeddedResource Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <EmbeddedResource Include="Scripts\knockout-2.2.0.debug.js" />
+    <EmbeddedResource Include="Scripts\knockout-2.2.0.js" />
+    <EmbeddedResource Include="Scripts\modernizr-2.6.2.js" />
+    <EmbeddedResource Include="Content\Styles\Site.css" />
+    <EmbeddedResource Include="Scripts\_references.js" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
