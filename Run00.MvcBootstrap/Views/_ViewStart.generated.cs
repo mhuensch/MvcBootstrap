@@ -9,7 +9,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Run00.MvcBootstrap.Views.World
+namespace Run00.MvcBootstrap.Views
 {
     using System;
     using System.Collections.Generic;
@@ -29,16 +29,22 @@ namespace Run00.MvcBootstrap.Views.World
     using System.Web.WebPages;
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("RazorGenerator", "1.5.4.0")]
-    [System.Web.WebPages.PageVirtualPathAttribute("~/Views/World/Hello.cshtml")]
-    public partial class Hello : System.Web.Mvc.WebViewPage<dynamic>
+    [System.Web.WebPages.PageVirtualPathAttribute("~/Views/_ViewStart.cshtml")]
+    public partial class ViewStart : System.Web.Mvc.ViewStartPage
     {
-        public Hello()
+        public ViewStart()
         {
         }
         public override void Execute()
         {
-WriteLiteral("HAHA Its the best! Again");
+            
+            #line 1 "..\..\Views\_ViewStart.cshtml"
+  
+	Layout = "~/Areas/Views/Shared/_Layout.cshtml";
 
+            
+            #line default
+            #line hidden
         }
     }
 }
