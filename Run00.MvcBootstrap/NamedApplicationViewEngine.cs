@@ -7,7 +7,7 @@ namespace Run00.MvcBootstrap
 	{
 		public void RegisterArea(string areaName)
 		{
-			base.ViewLocationFormats = base.ViewLocationFormats.Union(new[] { "~/Areas/" + areaName + "/Views/{1}/{0}.cshtml" }).ToArray();
+			base.ViewLocationFormats = base.ViewLocationFormats.Union(new[] { "~/" + areaName + "/Views/{1}/{0}.cshtml" }).ToArray();
 		}
 
 		protected override IView CreateView(ControllerContext controllerContext, string viewPath, string masterPath)

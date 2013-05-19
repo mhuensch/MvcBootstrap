@@ -27,7 +27,7 @@ namespace Run00.MvcBootstrap.AppStart
 			{
 				var appName = loadedApp.attribute.Name;
 				ApplicationPartRegistry.Register(loadedApp.assembly, "/Areas/" + appName);
-				_engine.RegisterArea(appName);
+				_engine.RegisterArea("Areas/" + appName);
 
 				_routes.MapRoute(
 						name: appName,
