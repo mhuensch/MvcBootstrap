@@ -5,7 +5,7 @@ namespace Run00.MvcBootstrap
 {
 	public class RazorEngine : RazorViewEngine
 	{
-		public const string RootAreaName = "Areas";
+		public const string RootAreaName = "Areas/MyWorld";
 		private static string[] NewPartialViewFormats = new[] {
 				"~/"+RazorEngine.RootAreaName+"/Views/{1}/{0}.cshtml",
 		};

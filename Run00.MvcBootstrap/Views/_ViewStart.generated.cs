@@ -40,7 +40,7 @@ namespace Run00.MvcBootstrap.Views
             
             #line 1 "..\..\Views\_ViewStart.cshtml"
   
-	Layout = "~/Areas/Views/Shared/_Layout.cshtml";
+	Layout = "~/Areas/MyWorld/Views/Shared/_Layout.cshtml";
 
             
             #line default
