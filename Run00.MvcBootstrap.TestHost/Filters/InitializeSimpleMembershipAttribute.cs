@@ -9,7 +9,7 @@ using Run00.MvcBootstrap.TestHost.Models;
 namespace Run00.MvcBootstrap.TestHost.Filters
 {
 	[AttributeUsage(AttributeTargets.Class | AttributeTargets.Method, AllowMultiple = false, Inherited = true)]
-	public sealed class InitializeSimpleMembershipAttribute : ActionFilterAttribute
+	public sealed class InitializeSimpleMembershipAttribute : ActionFilterAttribute, IAppFilter
 	{
 		private static SimpleMembershipInitializer _initializer;
 		private static object _initializerLock = new object();

@@ -185,6 +185,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Filters\ErrorHandlerAttribute.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -228,8 +229,12 @@
       <Project>{46c9fde4-328a-4e80-8504-aed5e2196ae1}</Project>
       <Name>BoC.Web.PrecompiledViews</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Run00.MvcBootstrap\Run00.MvcBootstrap.csproj">
+    <ProjectReference Include="..\Run00.MvcBootstrap.TestArea\Run00.MvcBootstrap.TestArea.csproj">
       <Project>{e5fa10b8-1324-437f-ade7-c6a85d6d6b83}</Project>
+      <Name>Run00.MvcBootstrap.TestArea</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Run00.MvcBootstrap\Run00.MvcBootstrap.csproj">
+      <Project>{92163e22-d2de-4545-bc92-93c1c7adb766}</Project>
       <Name>Run00.MvcBootstrap</Name>
     </ProjectReference>
   </ItemGroup>
