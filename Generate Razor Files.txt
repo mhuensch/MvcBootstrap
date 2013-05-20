@@ -1,0 +1,2 @@
+http://razorgenerator.codeplex.com/
+Enable-RazorGenerator Run00.MvcBootstrap.TestArea

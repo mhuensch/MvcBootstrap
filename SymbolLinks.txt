@@ -1,0 +1,23 @@
+Symbolic links, otherwise known as symlinks, are basically advanced shortcuts. 
+You can create symbolic links to individual files or folders, and then these 
+will appear like they are stored in the folder with the symbolic link even 
+though the symbolic link only points to their real location.
+
+Install one of the following:
+	http://download.microsoft.com/download/8/B/4/8B42259F-5D70-43F4-AC2E-4B208FD8D66A/vcredist_x64.EXE
+	http://download.microsoft.com/download/8/B/4/8B42259F-5D70-43F4-AC2E-4B208FD8D66A/vcredist_x86.EXE
+
+Install
+	http://schinagl.priv.at/nt/hardlinkshellext/HardLinkShellExt_X64.exe
+
+To easily update views even though we are compiling them:
+	Open Windows Explorer
+	Create a folder for the Area you want (i.e. Areas) in the target root dir (MvcBootstrap\Run00.MvcBootstrap.TestHost)
+	Expose the tree view and find the source folder you want and the target
+		i.e. Source - MvcBootstrap\Run00.MvcBootstrap\Views
+		i.e. Target - MvcBootstrap\Run00.MvcBootstrap.TestHost\Areas
+	Right click on the source folder and select "Pick Link Source"
+	Right click on the target folder and select "Drop As..." > "Symbolic Link"
+
+	Without re-compiling, change the source folder, save, and refresh.
+	ENJOY!	
