@@ -1,19 +1,21 @@
-﻿using System.Linq;
-using System.Reflection;
+﻿using Run00.WindsorMvc;
+using System.Linq;
 using System.Web.Mvc;
 using System.Web.Routing;
 
 namespace Run00.MvcBootstrap.TestHost.Controllers
 {
-	public class AppStartRouteConfig : IAppStart
+	public class AppStartRouteConfig : IComponentConfiguration
 	{
 		public AppStartRouteConfig(RouteCollection routes)
 		{
 			_routes = routes;
 		}
 
-		void IAppStart.Configure()
+		void IComponentConfiguration.Configure()
 		{
+			_routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+
 			_routes.MapRoute(
 					name: "Default",
 					url: "{controller}/{action}/{id}",

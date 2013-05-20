@@ -1,4 +1,5 @@
 ﻿using BoC.Web.Mvc.PrecompiledViews;
+using Run00.WindsorMvc;
 using System;
 using System.Linq;
 using System.Web.Mvc;
@@ -6,7 +7,7 @@ using System.Web.Routing;
 
 namespace Run00.MvcBootstrap.AppStart
 {
-	public class NamedApplicationConfig : IAppStart
+	public class NamedApplicationConfig : IComponentConfiguration
 	{
 		public NamedApplicationConfig(RouteCollection routes, INamedApplicationViewEngine engine)
 		{
@@ -14,7 +15,7 @@ namespace Run00.MvcBootstrap.AppStart
 			_engine = engine;
 		}
 
-		void IAppStart.Configure()
+		void IComponentConfiguration.Configure()
 		{
 			var appAssemblies =
 				from a
@@ -39,7 +40,6 @@ namespace Run00.MvcBootstrap.AppStart
 						constraints: new { area = new AreaRouteConstraint() }
 				);
 			}
-			//loadedApp.assembly.FullName.Split(',').ElementAt(0)
 		}
 
 		private class AreaRouteConstraint : IRouteConstraint

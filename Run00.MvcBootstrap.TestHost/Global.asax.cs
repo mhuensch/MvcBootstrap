@@ -1,10 +1,14 @@
-﻿namespace Run00.MvcBootstrap.TestHost
+﻿using Castle.Windsor;
+using Run00.WindsorMvc;
+
+namespace Run00.MvcBootstrap.TestHost
 {
 	public class MvcApplication : System.Web.HttpApplication
 	{
 		protected void Application_Start()
 		{
-			_bootstrap.Start();
+			_bootstrap.InstallFromBin();
+			_bootstrap.ConfigureComponents();
 		}
 
 		public override void Dispose()
@@ -13,6 +17,6 @@
 			base.Dispose();
 		}
 
-		private readonly Bootstrap _bootstrap = new Bootstrap();
+		private readonly IWindsorContainer _bootstrap = new WindsorContainer();
 	}
 }

@@ -40,6 +40,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Castle.Windsor.3.2.0\lib\net45\Castle.Windsor.dll</HintPath>
     </Reference>
+    <Reference Include="Run00.WindsorMvc">
+      <HintPath>..\packages\Run00.WindsorMvc.0.0.0.4\lib\Run00.WindsorMvc.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web" />
@@ -52,17 +55,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AppStart\MvcConfig.cs" />
+    <Compile Include="AppStart\ViewEngineConfig.cs" />
     <Compile Include="AppStart\NamedApplicationConfig.cs" />
     <Compile Include="ExtensionsForAssembly.cs" />
     <Compile Include="ExtensionsForHtmlHelper.cs" />
     <Compile Include="INamedApplicationViewEngine.cs" />
     <Compile Include="NamedApplicationAttribute.cs" />
-    <Compile Include="AppStart\FilterConfig.cs" />
-    <Compile Include="AppStart\RouteConfig.cs" />
-    <Compile Include="Bootstrap.cs" />
-    <Compile Include="IAppFilter.cs" />
-    <Compile Include="IAppStart.cs" />
     <Compile Include="Installer.cs" />
     <Compile Include="NamedApplicationViewEngine.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
