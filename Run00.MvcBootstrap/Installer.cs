@@ -19,7 +19,6 @@ namespace Run00.MvcBootstrap
 			//container.Register(Component.For<BundleCollection>().Instance(BundleTable.Bundles).LifeStyle.Singleton);
 			container.Register(Component.For<GlobalFilterCollection>().Instance(GlobalFilters.Filters).LifeStyle.Singleton);
 			container.Register(Component.For<RouteCollection>().Instance(RouteTable.Routes).LifeStyle.Singleton);
-			container.Register(Component.For<IControllerFactory>().ImplementedBy<WindsorControllerFactory>().LifeStyle.Singleton);
 			container.Register(Component.For<IMvcFilter>().ImplementedBy<HandleErrorAttribute>().LifeStyle.Singleton);
 			container.Register(Component.For<INamedApplicationViewEngine>().ImplementedBy<NamedApplicationViewEngine>().LifeStyle.Singleton);
 
@@ -39,11 +38,6 @@ namespace Run00.MvcBootstrap
 				.LifestyleSingleton()
 			);
 
-			container.Register(
-				Types.FromAssemblyInDirectory(new AssemblyFilter(HttpRuntime.BinDirectory))
-				.BasedOn<IController>()
-				.LifestyleTransient()
-			);
 		}
 	}
 }
