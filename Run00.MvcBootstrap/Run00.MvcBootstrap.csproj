@@ -52,6 +52,8 @@
   <ItemGroup>
     <Compile Include="AppStart\MvcConfig.cs" />
     <Compile Include="AppStart\NamedApplicationConfig.cs" />
+    <Compile Include="ExtensionsForAssembly.cs" />
+    <Compile Include="ExtensionsForHtmlHelper.cs" />
     <Compile Include="INamedApplicationViewEngine.cs" />
     <Compile Include="NamedApplicationAttribute.cs" />
     <Compile Include="AppStart\FilterConfig.cs" />

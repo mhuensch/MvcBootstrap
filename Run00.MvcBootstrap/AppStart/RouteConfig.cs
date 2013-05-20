@@ -13,12 +13,6 @@ namespace Run00.MvcBootstrap.AppStart
 		void IAppStart.Configure()
 		{
 			_routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
-
-			_routes.MapRoute(
-					name: "Default",
-					url: "{controller}/{action}/{id}",
-					defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
-			);
 		}
 
 		private readonly RouteCollection _routes;

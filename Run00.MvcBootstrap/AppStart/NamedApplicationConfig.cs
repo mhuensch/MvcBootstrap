@@ -19,7 +19,7 @@ namespace Run00.MvcBootstrap.AppStart
 			var appAssemblies =
 				from a
 				in AppDomain.CurrentDomain.GetAssemblies()
-				let att = a.GetCustomAttributes(typeof(NamedApplicationAttribute), false).SingleOrDefault() as NamedApplicationAttribute
+				let att = a.GetNamedApplicationAttribute()
 				where att != null
 				select new { assembly = a, attribute = att };
 
@@ -29,11 +29,30 @@ namespace Run00.MvcBootstrap.AppStart
 				ApplicationPartRegistry.Register(loadedApp.assembly, "/Areas/" + appName);
 				_engine.RegisterArea("Areas/" + appName);
 
+				var controllerNamespace = loadedApp.assembly.FullName.Split(',').ElementAt(0) + ".Controllers";
+
 				_routes.MapRoute(
 						name: appName,
-						url: "Areas/" + appName + "/{controller}/{action}/{id}",
-						defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+						url: "Areas/{area}/{controller}/{action}/{id}",
+						defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional },
+						namespaces: new string[] { controllerNamespace },
+						constraints: new { area = new AreaRouteConstraint() }
 				);
+			}
+			//loadedApp.assembly.FullName.Split(',').ElementAt(0)
+		}
+
+		private class AreaRouteConstraint : IRouteConstraint
+		{
+			bool IRouteConstraint.Match(System.Web.HttpContextBase httpContext, Route route, string parameterName, RouteValueDictionary values, RouteDirection routeDirection)
+			{
+				if (values["area"] == null)
+					return false;
+
+				if (string.IsNullOrWhiteSpace(values["area"].ToString()))
+					return false;
+
+				return true;
 			}
 		}
 

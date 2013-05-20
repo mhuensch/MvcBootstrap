@@ -44,6 +44,8 @@ namespace Run00.MvcBootstrap
 		{
 			Contract.Assume(_kernel != null);
 
+			var area = requestContext.RouteData.Values["area"];
+
 			if (controllerType == null)
 			{
 				var type = (controllerType != null) ? controllerType.ToString() : "null";
